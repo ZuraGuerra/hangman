@@ -7,6 +7,7 @@ defmodule Hangman.Repo.Migrations.CreateWord do
 
       timestamps()
     end
+    create unique_index(:words, [:content])
 
   end
 end

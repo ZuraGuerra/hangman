@@ -24,5 +24,6 @@ defmodule Hangman.Router do
     pipe_through :api
 
     resources "/words", WordController, except: [:new, :edit]
+    resources "/players", PlayerController, except: [:new, :edit]
   end
 end
