@@ -19,8 +19,10 @@ defmodule Hangman.Router do
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", Hangman do
-  #   pipe_through :api
-  # end
+  Other scopes may use custom stacks.
+  scope "/api", Hangman do
+    pipe_through :api
+
+    resources "/words", WordController, except: [:new, :edit]
+  end
 end
