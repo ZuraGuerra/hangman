@@ -19,7 +19,7 @@ defmodule Hangman.Router do
     get "/", PageController, :index
   end
 
-  Other scopes may use custom stacks.
+  #Other scopes may use custom stacks.
   scope "/api", Hangman do
     pipe_through :api
 
