@@ -25,5 +25,6 @@ defmodule Hangman.Router do
 
     resources "/words", WordController, except: [:new, :edit]
     resources "/players", PlayerController, except: [:new, :edit]
+    resources "/sessions", SessionController, except: [:new, :edit]
   end
 end
